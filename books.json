@@ -1,0 +1,22 @@
+[
+  {
+    "title": "The Shining",
+    "author": "Stephen King",
+    "available": true
+  },
+  {
+    "title": "Rainbow Six",
+    "author": "Tom Clancy",
+    "available": false
+  },
+  {
+    "title": "Steve Jobs",
+    "author": "Walter Isaacson",
+    "available": true
+  },
+  {
+    "title": "Elon Musk",
+    "author": "Ashley Vance",
+    "available": false
+  }
+]

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Sign In</title>
+</head>
+<body>
+    <header id="sign-in-header">
+        <hr class="header-line">
+        <h1 id="libraryTitle">Sign In Page</h1>
+        <hr class="header-line">
+    </header>
+
+    <div class="signin-container">
+        <form action="/signin" method="post">
+        
+            <table>
+                <tr>
+                    <td>
+                        <input id="username" name="username" placeholder="Username" minlength="5" type="text" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="password" name="password" placeholder="Password" minlength="5" type="password" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <button type="submit">Submit</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="background-color: #eafadc;">
+                        {{#if errorMessage}}
+                            <label>{{errorMessage}}</label>
+                        {{/if}}
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

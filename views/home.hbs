@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Home</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <hr class="header-line">
+        <section id="one">
+            <span id="two"></span>
+        </section>
+        <h1 id="libraryTitle">The Best Library</h1>
+        <hr class="header-line">
+    </header>
+
+    <nav>
+        <a id="aSignout" href="/">Sign Out</a>
+    </nav>
+    <div class="container">
+        <!-- Books Section -->
+        <div class="books-section">
+            <h2>Books Available</h2>
+            <form id="borrowForm" method="POST" action="/borrowBooks">
+                <label><span>Book Title 1</span><input type="checkbox" name="book" value="Book1"></label><br>
+                <label><span>Book Title 2</span><input type="checkbox" name="book" value="Book2"></label><br>
+                <label><span>Book Title 3</span><input type="checkbox" name="book" value="Book3"></label><br>
+                <label><span>Book Title 4</span><input type="checkbox" name="book" value="Book4"></label><br>
+                <label><span>Book Title 5</span><input type="checkbox" name="book" value="Book5"></label><br>
+                <label><span>Book Title 6</span><input type="checkbox" name="book" value="Book6"></label><br>
+                <label><span>Book Title 7</span><input type="checkbox" name="book" value="Book7"></label><br>
+                <label><span>Book Title 8</span><input type="checkbox" name="book" value="Book8"></label><br>
+                <label><span>Book Title 9</span><input type="checkbox" name="book" value="Book9"></label><br>
+                <label><span>Book Title 10</span><input type="checkbox" name="book" value="Book10"></label><br>
+                <button type="submit">Borrow</button>
+            </form>
+        </div>
+        <!-- User Info Section -->
+        <div class="user-info">
+            <h2>Welcome, {{email}}</h2>
+            <div id="borrowedBooks"> 
+                <h3>Borrowed Books:</h3>
+                <ul>
+                    {{#each borrowedBooks}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
